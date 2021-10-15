@@ -1,5 +1,5 @@
 // Copyright (c) 2021 hs293go
-// 
+//
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
@@ -32,14 +32,12 @@ JetsonCamera::JetsonCamera(ros::NodeHandle &nh)
   sensor_msgs::CameraInfo ci;
 
   if (!cinfo_->isCalibrated()) {
-    ROS_INFO(
-        "Camera calibration is not valid! Setting image width and height from "
-        "rosparams.");
     cinfo_->setCameraName(camera_device_);
     ci.width = opts.width = nh.param("image_width"s, 640);
     ci.height = opts.height = nh.param("image_height"s, 480);
     ci.header.frame_id = img_.header.frame_id;
     cinfo_->setCameraInfo(ci);
+    ROS_INFO("Got image dimensions: %ux%u from rosparams.", ci.width, ci.height);
   } else {
     ci = cinfo_->getCameraInfo();
     opts.width = ci.width;
