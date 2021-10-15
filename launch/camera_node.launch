@@ -1,0 +1,8 @@
+<launch>
+  <node name="camera_node" pkg="jetson_cam" type="camera_node" output="screen">
+    <param name="video_device" value="0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="camera_frame_id" value="camera_node" />
+  </node>
+</launch>

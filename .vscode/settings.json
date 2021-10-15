@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.launch": "xml",
+    "algorithm": "cpp"
+  },
+  "licenser.license": "MIT"
+}
