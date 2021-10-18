@@ -133,6 +133,8 @@ include_directories(
   ${GSTREAMER_INCLUDE_DIRS}
 )
 
+link_directories(/usr/lib/aarch64-linux-gnu/tegra)
+
 file(GLOB_RECURSE LIB_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS src/${PROJECT_NAME}/*.cpp)
 
 add_library(${PROJECT_NAME} STATIC ${LIB_SOURCES})
