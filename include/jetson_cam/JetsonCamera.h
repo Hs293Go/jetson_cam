@@ -1,20 +1,20 @@
 // Copyright (c) 2021 hs293go
-// 
+//
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
 #ifndef JETSONCAMERA_H
 #define JETSONCAMERA_H
 
-#include <algorithm>
-#include <memory>
-#include <string>
-
 #include <image_transport/image_transport.h>
 #include <ros/ros.h>
 #include <sensor_msgs/CameraInfo.h>
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/image_encodings.h>
+
+#include <algorithm>
+#include <memory>
+#include <string>
 
 namespace camera_info_manager {
 class CameraInfoManager;
