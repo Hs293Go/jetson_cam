@@ -18,9 +18,9 @@ JetsonCamera::JetsonCamera(ros::NodeHandle &nh)
   frame_rate_ = nh_.param("framerate", 30.0);
   camera_device_ = nh_.param("video_device", "0"s);
   camera_device_type_ = nh_.param("device_type", "default"s);
-  camera_name_ = nh_.param("camera_name", "head_camera"s);
+  camera_name_ = nh_.param("camera_name", "jetson_nano"s);
   camera_info_url_ = nh_.param("camera_info_url", ""s);
-  image_topic_ = nh_.param("image", "/jetson_nano/image_raw"s);
+  image_topic_ = nh_.param("image", "/"s + camera_name_ + "/image_raw"s);
   cinfo_.reset(new camera_info_manager::CameraInfoManager(nh_, camera_name_,
                                                           camera_info_url_));
 
